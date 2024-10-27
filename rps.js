@@ -35,7 +35,6 @@ const playGame = () => {
       console.log(`You won! ${humanChoice} beats ${computerChoice}`);
       humanScore++;
     }
-    return { humanScore, computerScore };
   };
 
   const humanSelection = getHumanChoice();
