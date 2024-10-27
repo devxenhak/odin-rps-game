@@ -15,16 +15,24 @@ const getComputerChoice = () => {
   return computerChoice;
 };
 
-getComputerChoice();
-
 const getHumanChoice = () => {
   const humanChoice = prompt("Enter your Choice: ").toLowerCase();
   return humanChoice;
 };
 
-getHumanChoice();
-
-const playRound = (humanChoice, computerChoice) => {};
+const playRound = (humanChoice, computerChoice) => {
+  if (humanChoice === computerChoice) {
+    console.log(`It's a TIE`);
+  } else if (
+    (humanChoice === "rock" && computerChoice === "paper") ||
+    (humanChoice === "paper" && computerChoice === "scissor") ||
+    (humanChoice === "scissor" && computerChoice === "rock")
+  ) {
+    console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+  } else {
+    console.log(`You won! ${humanChoice} beats ${computerChoice}`);
+  }
+};
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
