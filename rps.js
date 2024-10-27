@@ -52,7 +52,7 @@ const displayWinner = (humanScore, computerScore) => {
     ? console.log(`The winner is Human!!!`)
     : computerScore > humanScore
     ? console.log(`The winner is Computer!!!`)
-    : console.log(`TIE!!!`);
+    : console.log(`The game was a TIE!!!`);
 };
 
 displayWinner(humanScore, computerScore);
