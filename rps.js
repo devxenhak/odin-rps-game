@@ -1,5 +1,5 @@
-let HumanScore;
-let computerScore;
+let humanScore = 0;
+let computerScore = 0;
 
 const getComputerChoice = () => {
   let computerChoice;
@@ -23,7 +23,7 @@ const getHumanChoice = () => {
 const playGame = () => {
   const playRound = (humanChoice, computerChoice) => {
     if (humanChoice === computerChoice) {
-      console.log(`It's a TIE`);
+      console.log(`It's a TIE this round`);
     } else if (
       (humanChoice === "rock" && computerChoice === "paper") ||
       (humanChoice === "paper" && computerChoice === "scissors") ||
@@ -33,8 +33,9 @@ const playGame = () => {
       computerScore++;
     } else {
       console.log(`You won! ${humanChoice} beats ${computerChoice}`);
-      HumanScore++;
+      humanScore++;
     }
+    return { humanScore, computerScore };
   };
 
   const humanSelection = getHumanChoice();
@@ -46,3 +47,13 @@ const playGame = () => {
 for (let i = 0; i < 5; i++) {
   playGame();
 }
+
+const displayWinner = (humanScore, computerScore) => {
+  humanScore === 3
+    ? console.log(`The winner is Human!!!`)
+    : computerScore === 3
+    ? console.log(`The winner is Computer!!!`)
+    : console.log(`TIE!!!`);
+};
+
+displayWinner(humanScore, computerScore);
