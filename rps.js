@@ -26,7 +26,7 @@ const playRound = (humanChoice, computerChoice) => {
   } else if (
     (humanChoice === "rock" && computerChoice === "paper") ||
     (humanChoice === "paper" && computerChoice === "scissors") ||
-    (humanChoice === "scissor" && computerChoice === "rock")
+    (humanChoice === "scissors" && computerChoice === "rock")
   ) {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
   } else {
