@@ -15,12 +15,14 @@ const getComputerChoice = () => {
   return computerChoice;
 };
 
-console.log(getComputerChoice());
+getComputerChoice();
 
 const getHumanChoice = () => {
   const humanChoice = prompt("Enter your Choice: ").toLowerCase();
   return humanChoice;
 };
+
+getHumanChoice();
 
 const playRound = (humanChoice, computerChoice) => {};
 
