@@ -29,8 +29,10 @@ const playRound = (humanChoice, computerChoice) => {
     (humanChoice === "scissors" && computerChoice === "rock")
   ) {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+    computerScore++;
   } else {
     console.log(`You won! ${humanChoice} beats ${computerChoice}`);
+    HumanScore++;
   }
 };
 
