@@ -10,7 +10,7 @@ const getComputerChoice = () => {
   } else if (choice === 1) {
     computerChoice = "paper";
   } else {
-    computerChoice = "scissor";
+    computerChoice = "scissors";
   }
   return computerChoice;
 };
@@ -25,7 +25,7 @@ const playRound = (humanChoice, computerChoice) => {
     console.log(`It's a TIE`);
   } else if (
     (humanChoice === "rock" && computerChoice === "paper") ||
-    (humanChoice === "paper" && computerChoice === "scissor") ||
+    (humanChoice === "paper" && computerChoice === "scissors") ||
     (humanChoice === "scissor" && computerChoice === "rock")
   ) {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
