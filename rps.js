@@ -49,9 +49,9 @@ for (let i = 0; i < 5; i++) {
 }
 
 const displayWinner = (humanScore, computerScore) => {
-  humanScore === 3
+  humanScore > computerScore
     ? console.log(`The winner is Human!!!`)
-    : computerScore === 3
+    : computerScore > humanScore
     ? console.log(`The winner is Computer!!!`)
     : console.log(`TIE!!!`);
 };
